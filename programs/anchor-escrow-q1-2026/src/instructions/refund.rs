@@ -60,7 +60,7 @@ impl <'info>Refund<'info> {
 
         let transfer_cpi_ctx = CpiContext::new_with_signer(self.token_program.to_account_info(), transfer_accounts, signer_seeds,);
 
-        transfer_checked(transfer_cpi_ctx, self.vault.amount, self.mint_a.decimals);
+        transfer_checked(transfer_cpi_ctx, self.vault.amount, self.mint_a.decimals)?;
 
         let close_acct = CloseAccount{
             account: self.vault.to_account_info(),
