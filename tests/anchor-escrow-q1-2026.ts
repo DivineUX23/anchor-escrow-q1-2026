@@ -1,6 +1,6 @@
 import * as anchor from "@coral-xyz/anchor";
 import { Program } from "@coral-xyz/anchor";
-import { AnchorEscrowQ425 } from "../target/types/anchor-escrow-q1-2026";
+import { AnchorEscrowQ12026 } from "../target/types/anchor-escrow-q1-2026";
 import { expect } from "chai";
 import { getAssociatedTokenAddressSync, createAssociatedTokenAccountInstruction, createMint, mintTo, TOKEN_PROGRAM_ID, ASSOCIATED_TOKEN_PROGRAM_ID } from "@solana/spl-token";
 
@@ -8,7 +8,7 @@ describe("anchor-escrow-q1-2026", () => {
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
-  const program = anchor.workspace.AnchorEscrowQ425 as Program<AnchorEscrowQ425>;
+  const program = anchor.workspace.AnchorEscrowQ12026 as Program<AnchorEscrowQ12026>;
 
   const maker = provider.wallet.publicKey;
   const taker = anchor.web3.Keypair.generate();
