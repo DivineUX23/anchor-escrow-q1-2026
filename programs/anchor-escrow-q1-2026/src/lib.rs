@@ -16,4 +16,8 @@ pub mod anchor_escrow_q1_2026 {
         ctx.accounts.deposit(deposit)?;
         ctx.accounts.init_escrow(seed, recieve, &ctx.bumps)
     }
+
+    pub fn refund(ctx: Context<Refund>) -> Result<()> {
+        ctx.accounts.refund_and_close()
+    }
 }

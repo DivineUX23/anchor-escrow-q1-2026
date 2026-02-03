@@ -50,7 +50,7 @@ impl<'info>Make<'info>{
             mint_a: self.mint_a.key(),
             mint_b: self.mint_b.key(),
             receive, 
-            bumb: bumps.escrow,
+            bump: bumps.escrow,
         });
         Ok(())
     }
